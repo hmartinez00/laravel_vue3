@@ -2,25 +2,25 @@
 
 Vue3 js on Laravel - Install Process
 
-### Install Laravel
+### 1. Install Laravel
 
 ```bash
 composer create-project laravel/laravel laravel_vue3
 ```
 
-### Install node and run node server
+### 2. Install node and run node server
 
 ```bash
 npm install
 ```
 
-### Install Vue3
+### 3. Install Vue3
 
 ```bash
 npm install vue@latest
 ```
 
-### Instal vitejs/plugin-vue
+### 4. Instal vitejs/plugin-vue
 
 ```bash
 npm i @vitejs/plugin-vue
@@ -30,13 +30,13 @@ Instalará el paquete @vitejs/plugin-vue y lo añadirá a la lista de dependenci
 
 > Permite que Vite procese archivos .vue correctamente.
 
-### Install Router
+### 5. Install Router
 
 ```bash
 npm install vue-router
 ```
 
-### modify the file vite-config.js
+### 6. modify the file vite-config.js
 
 ```js
 import { defineConfig } from 'vite';
@@ -54,7 +54,7 @@ export default defineConfig({
 });
 ```
 
-### create file resources\views\layouts\App.vue
+### 7. create file resources\views\layouts\App.vue
 
 ```vue
 <template>
@@ -86,7 +86,7 @@ export default defineConfig({
 </style>
 ```
 
-### create pages (example: resources\views\_pages\HomePage.vue)
+### 8. create pages (example: resources\views\_pages\HomePage.vue)
 
 ```vue
 <template>
@@ -118,7 +118,7 @@ export default defineConfig({
 </style>
 ```
 
-### create resources\js\router\index.js
+### 9. create resources\js\router\index.js
 
 ```js
 import { createRouter, createWebHistory } from 'vue-router';
@@ -147,7 +147,7 @@ const router = createRouter({
 export default router;
 ```
 
-### modify resources\js\app.js
+### 10. modify resources\js\app.js
 
 ```js
 import './bootstrap';
@@ -166,7 +166,7 @@ createApp(app).use(router).mount('#app');
 
 En resumen, esta línea de código crea una nueva aplicación Vue, le añade el router para gestionar las rutas y monta la aplicación en un elemento del DOM con el id app.
 
-### Create access view
+### 11. Create access view
 
 En este caso instalaremos en la vista que renderiza la ruta de acceso predeterminada de la aplicacion para levantar mas rapido el resultado. Ustede puede usar la visa de acceso que desee, solo debe asegurar el uso de vite, y la etiqueta `<div id="app"></div>` dentro de la vista. El `id="app"` fue configurado `resources\js\app.js` como punto de montaje.
 
@@ -200,7 +200,7 @@ En este caso instalaremos en la vista que renderiza la ruta de acceso predetermi
 </html>
 ```
 
-### start server
+### 12. start server
 
 ```bash
 npm run dev &
